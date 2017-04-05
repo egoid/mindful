@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+//fonts
+@font-face {
+  font-family: 'Avenir-Book';
+  src: url('../fonts/AvenirLTStd-Book.otf');
+}
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('../fonts/OpenSans-Regular.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url('../fonts/Roboto-Thin.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+
+//fonts
+$default-font: 'Avenir-Book';
+$open-sans-font: 'OpenSans-Regular';
+$roboto-thin: 'Roboto-Thin';
+$roboto-regular: 'Roboto-Regular'; //variable
+$boxSize: 200px;
+$ringWidth: 10px;
+$bgColor: #2c3e50;
+$ringColor: #e74c3c; //Colors
+$light-pink: rgb(252, 238, 229);
+$pale-grey: rgb(238, 232, 240);
+$greyish-brown: rgb(74, 74, 74);
+$tomato: rgb(234, 83, 74);
+$blush: rgb(242, 120, 117);
+$darkish-pink: rgb(234, 77, 97);
+$dark-peach: rgb(237, 115, 108);
+$button-border: #979797;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {overflow :initial}
+body {overflow :initial}
+body,
+html {
+  position: relative;
+  width: calc(100vw);
+  padding-left: 0px;
+  left: 0px;
+  font-family: $default-font;
+  height: 100%;
+  overflow-x: initial;
+}
+#yobs_container {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+button,
+button:active,
+button:focus,
+input,
+input:active,
+input:focus,
+select,
+select:active,
+select:focus,
+textarea,
+textarea:active,
+textarea:focus {
+  outline: 0;
+  text-decoration: none;
+}
+button a {
+  color: white;
+}
+
+.horzspace {
+  display: block;
+  height: 50px;
+  width: 100%;
+  float: left;
+}
+@mixin borderrounded($radius) {
+  border-radius: $radius;
+}
+@mixin roundedbutton($color) {
+   @include borderrounded(30px);
+  background: $color;
+  padding: 10px;
+  border: 0;
+}
+@mixin fancyheader {
+  height: 1px;
+  background: #979797;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
