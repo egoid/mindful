@@ -51,10 +51,7 @@ html {
   height: 100%;
   overflow-x: initial;
 }
-#yobs_container {
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
+
 
 a,
 a:active,
@@ -75,29 +72,10 @@ textarea:focus {
   outline: 0;
   text-decoration: none;
 }
-button a {
-  color: white;
-}
-
-.horzspace {
-  display: block;
-  height: 50px;
-  width: 100%;
-  float: left;
-}
-@mixin borderrounded($radius) {
-  border-radius: $radius;
-}
-@mixin roundedbutton($color) {
-   @include borderrounded(30px);
-  background: $color;
+button {
+  background: transparent;
+  border: 1px solid black;
   padding: 10px;
-  border: 0;
-}
-@mixin fancyheader {
-  height: 1px;
-  background: #979797;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  font-size: .75em;
+  margin: 10px;
 }

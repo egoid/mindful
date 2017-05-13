@@ -1,0 +1,18 @@
+#newQuizblock{
+  width: 100%;
+  height: 100%;
+
+  .middle_block {
+    border: 1px solid black;
+    padding: 10px;
+    .dismiss {
+      text-align: left;
+      cursor: pointer;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+#customQuiz {
+
+  
+  .quiz_card_middle {
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    .tool_bar {
+      text-align: center;
+      .col-md-3 {
+        cursor: pointer;
+      }
+    }
+  }
+}

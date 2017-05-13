@@ -1,0 +1,37 @@
+<div id="quiz_component">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <h4>{{doctorPreview.quiz_title}}</h4>
+        <hr>
+        <table>
+          <thead>
+            <tr>
+              <td>Question</td>
+              <td>Answer</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="quiz in doctorPreview.quiz.questions track by $index">
+              <td>{{quiz}}</td>
+              <td ng-if="doctorPreview.quiz.static_rubric === true">
+                <button ng-class="{active : doctorPreview.selected_codex[$index] == 'a' }" ng-click="doctorPreview.select($index , 'a')"> {{doctorPreview.quiz.rubric.statement.rubric_a}} </button>
+                <button ng-class="{active : doctorPreview.selected_codex[$index] == 'b' }" ng-click="doctorPreview.select($index , 'b')"> {{doctorPreview.quiz.rubric.statement.rubric_b}} </button>
+                <button ng-class="{active : doctorPreview.selected_codex[$index] == 'c' }" ng-click="doctorPreview.select($index , 'c')"> {{doctorPreview.quiz.rubric.statement.rubric_c}} </button>
+                <button ng-class="{active : doctorPreview.selected_codex[$index] == 'd' }" ng-click="doctorPreview.select($index , 'd')"> {{doctorPreview.quiz.rubric.statement.rubric_d}} </button>
+                <button ng-class="{active : doctorPreview.selected_codex[$index] == 'e' }" ng-click="doctorPreview.select($index , 'e')"> {{doctorPreview.quiz.rubric.statement.rubric_e}} </button>
+              </td>
+              <td ng-if="doctorPreview.quiz.static_rubric === false">
+                <button ng-class="{active : doctorPreview.selected_codex[$index] == 'a' }" ng-click="doctorPreview.select($index , 'a')"> {{doctorPreview.quiz.rubric.questions.questions_a[$index]}} </button>
+                <button ng-class="{active : doctorPreview.selected_codex[$index] == 'b' }" ng-click="doctorPreview.select($index , 'b')"> {{doctorPreview.quiz.rubric.questions.questions_b[$index]}} </button>
+                <button ng-class="{active : doctorPreview.selected_codex[$index] == 'c' }" ng-click="doctorPreview.select($index , 'c')"> {{doctorPreview.quiz.rubric.questions.questions_c[$index]}} </button>
+                <button ng-class="{active : doctorPreview.selected_codex[$index] == 'd' }" ng-click="doctorPreview.select($index , 'd')"> {{doctorPreview.quiz.rubric.questions.questions_d[$index]}} </button>
+                <button ng-class="{active : doctorPreview.selected_codex[$index] == 'e' }" ng-click="doctorPreview.select($index , 'e')"> {{doctorPreview.quiz.rubric.questions.questions_e[$index]}} </button>
+              </td>
+            </tr>            
+          </tbody>
+        </table>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>

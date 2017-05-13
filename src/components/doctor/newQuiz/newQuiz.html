@@ -1,0 +1,33 @@
+<clarity-nav />
+
+<div id="doctor_newquiz_container">
+  <h2> New Questionnaire Form </h2>
+
+  <div class="row">
+    <button ng-click="doctorNewQuiz.add_question()">+ Add a question</button>
+    <button ng-click="doctorNewQuiz.save()">Save Questionnaire</button>
+    <button ng-click="doctorNewQuiz.add_question()">Preview Questionnaire</button>
+  </div>
+  <div class="row">
+
+      <input type="checkbox" ng-model="doctorNewQuiz.grading" ng-change="doctorNewQuiz.toggle_rubric()" />
+      Check here if your quiz will use the same grading criteria for every question
+      <br>
+      <!-- <a href=""> Click here for an example </a> -->
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 header">
+        <h4>Quiz Title</h4>
+        <input type="text" placeholder="Your Quiz Title" ng-model="doctorNewQuiz.title" />
+        <hr>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+
+  <new-rubric ng-if="doctorNewQuiz.static_grading_criteria > 0"></new-rubric>
+  <new-quiz ng-repeat="quiz in doctorNewQuiz.questions"></new-quiz>
+
+</div>

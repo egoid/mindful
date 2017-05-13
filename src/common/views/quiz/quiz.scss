@@ -1,0 +1,17 @@
+#quiz_component {
+    table {
+      width: 100%;
+      tbody {
+        tr {
+         td {
+
+          .active {
+            background: black;
+            color: white;
+          }
+         }
+        }
+      }
+    }
+
+}

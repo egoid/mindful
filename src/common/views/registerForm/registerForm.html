@@ -1,0 +1,16 @@
+<div id="register_form">
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-xs-4">
+    </div>
+    <div class="col-lg-4 col-md-4 col-xs-4 middle_box">
+      <h4> Register Form </h4>
+      <input type="text" placeholder="First Name" ng-model="doctorSignup.first_name" />
+      <input type="text" placeholder="Last Name"  ng-model="doctorSignup.last_name"/>
+      <input type="text" placeholder="Email"  ng-model="doctorSignup.email"/>
+      <input type="password" placeholder="Password"  ng-model="doctorSignup.password" />
+
+      <button ng-click="doctorSignup.actions.save_user()"> Register </button>
+    </div>
+    <div class="col-lg-4 col-md-4 col-xs-4">
+    </div>
+</div>

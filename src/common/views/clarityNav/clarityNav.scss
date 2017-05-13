@@ -1,0 +1,21 @@
+#clarityNavHeader {
+  padding: 0px;
+  border-bottom: 1px solid black;
+  line-height: 50px;
+  font-size: 1.5em;
+  .menu_item {
+    padding-left: 10px;
+    border-right: 1px solid black;
+    padding-top: 0px;
+    text-align: center
+  }
+}
+#clarityNav {
+  border-bottom: 1px solid black;
+  padding: 10px;
+  .menu_item {
+    text-align: center;
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+}

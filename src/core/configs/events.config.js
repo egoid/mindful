@@ -6,6 +6,7 @@
     $rootScope.$on('$stateChangeStart',
       function(event, toState, toParams, fromState, fromParams, options) {
         // var userobj = authService.getCurrentUser();
+        var userobj = { user_type : 'doctor'}
 
         var currentstate = toState.name;
 
@@ -16,7 +17,7 @@
               $timeout(function() {
                 $state.go(currentstate, toParams);
               });
-              break;
+              
             default:
               $timeout(function() {
                 $state.go('candidate.signup');
@@ -28,25 +29,27 @@
 
         } else {
           var user_type = userobj.user_type;
-          if (user_type == 'employee') {
+          if (user_type == 'doctor') {
 
             switch (currentstate) {
-
               default:
                 $timeout(function() {
+                  console.log(currentstate)
                   $state.go(currentstate);
                 });
+
 
 
             }
 
 
-          } else if (user_type == 'employer') { 
+          } else if (user_type == 'patient') { 
             switch (currentstate) {
               default:
                 $timeout(function() {
                   $state.go(currentstate);
                 });
+
 
 
             }

@@ -1,0 +1,26 @@
+<div id="clarityNavHeader">
+  <div class="row">
+    <div class="col-md-2 clarity_header">
+        <div class="menu_item">
+          Mindful
+        </div>
+    </div>
+  </div>
+</div>
+
+<div id="clarityNav">
+  <div class="row">
+    <div ng-repeat="item in clarityNavCtrl.menuItemLeft" class="col-md-2">
+      <div ng-if="item.state">
+        <div class="menu_item" ui-sref="{{item.state}}" >
+        {{item.label}}
+        </div>
+      </div>
+    </div>
+    <div ng-repeat="item in clarityNavCtrl.menuItemRight" class="col-md-2">
+      <div class="menu_item" ui-sref="doctor.signup">
+      {{item.label}}
+      </div>
+    </div>
+  </div>
+</div>

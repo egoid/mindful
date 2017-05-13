@@ -10117,12 +10117,7 @@ html {
   height: 100%;
   overflow-x: initial; }
 
-/* line 54, /Users/ta/Desktop/clarity/clarity_fe/src/scss/universal.scss */
-#yobs_container {
-  overflow-x: hidden;
-  overflow-y: hidden; }
-
-/* line 59, /Users/ta/Desktop/clarity/clarity_fe/src/scss/universal.scss */
+/* line 56, /Users/ta/Desktop/clarity/clarity_fe/src/scss/universal.scss */
 a,
 a:active,
 a:focus,
@@ -10142,13 +10137,195 @@ textarea:focus {
   outline: 0;
   text-decoration: none; }
 
-/* line 78, /Users/ta/Desktop/clarity/clarity_fe/src/scss/universal.scss */
-button a {
-  color: white; }
+/* line 75, /Users/ta/Desktop/clarity/clarity_fe/src/scss/universal.scss */
+button {
+  background: transparent;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: .75em;
+  margin: 10px; }
 
-/* line 82, /Users/ta/Desktop/clarity/clarity_fe/src/scss/universal.scss */
-.horzspace {
-  display: block;
-  height: 50px;
+/* line 2, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/loginForm/loginForm.scss */
+#loginForm .login_box {
+  padding: 25px;
+  border: 5px solid black;
+  height: auto;
+  text-align: center;
+  margin: 100px 100px 0 0; }
+  /* line 8, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/loginForm/loginForm.scss */
+  #loginForm .login_box input {
+    width: 100%;
+    padding: 10px;
+    text-align: center; }
+
+/* line 1, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/clarityNav/clarityNav.scss */
+#clarityNavHeader {
+  padding: 0px;
+  border-bottom: 1px solid black;
+  line-height: 50px;
+  font-size: 1.5em; }
+  /* line 6, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/clarityNav/clarityNav.scss */
+  #clarityNavHeader .menu_item {
+    padding-left: 10px;
+    border-right: 1px solid black;
+    padding-top: 0px;
+    text-align: center; }
+
+/* line 13, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/clarityNav/clarityNav.scss */
+#clarityNav {
+  border-bottom: 1px solid black;
+  padding: 10px; }
+  /* line 16, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/clarityNav/clarityNav.scss */
+  #clarityNav .menu_item {
+    text-align: center;
+    font-size: 1.1em;
+    cursor: pointer; }
+
+/* line 4, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/customQuiz/customQuiz.scss */
+#customQuiz .quiz_card_middle {
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+  margin-top: 25px;
+  margin-bottom: 25px; }
+  /* line 12, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/customQuiz/customQuiz.scss */
+  #customQuiz .quiz_card_middle .tool_bar {
+    text-align: center; }
+    /* line 14, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/customQuiz/customQuiz.scss */
+    #customQuiz .quiz_card_middle .tool_bar .col-md-3 {
+      cursor: pointer; }
+
+/* line 1, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/newQuizBlock/newQuizBlock.scss */
+#newQuizblock {
+  padding-bottom: 25px; }
+  /* line 6, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/newQuizBlock/newQuizBlock.scss */
+  #newQuizblock .row .col-md-8 .question_block {
+    border: 1px solid black; }
+    /* line 8, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/newQuizBlock/newQuizBlock.scss */
+    #newQuizblock .row .col-md-8 .question_block input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px; }
+
+/* line 1, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/newRubric/newRubric.scss */
+#newRubric {
+  padding-bottom: 25px; }
+  /* line 6, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/newRubric/newRubric.scss */
+  #newRubric .row .col-md-8 .question_block {
+    border: 1px solid black; }
+    /* line 8, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/newRubric/newRubric.scss */
+    #newRubric .row .col-md-8 .question_block input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px; }
+
+/* line 2, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/quiz/quiz.scss */
+#quiz_component table {
+  width: 100%; }
+  /* line 8, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/quiz/quiz.scss */
+  #quiz_component table tbody tr td .active {
+    background: black;
+    color: white; }
+
+/* line 1, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/newPatientBlock/newPatientBlock.scss */
+#newQuizblock {
   width: 100%;
-  float: left; }
+  height: 100%; }
+  /* line 5, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/newPatientBlock/newPatientBlock.scss */
+  #newQuizblock .middle_block {
+    border: 1px solid black;
+    padding: 10px; }
+    /* line 8, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/newPatientBlock/newPatientBlock.scss */
+    #newQuizblock .middle_block .dismiss {
+      text-align: left;
+      cursor: pointer; }
+    /* line 12, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/newPatientBlock/newPatientBlock.scss */
+    #newQuizblock .middle_block input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px; }
+
+/* line 3, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/registerForm/registerForm.scss */
+#register_form .row .middle_box {
+  margin: 100px 100px 0 0;
+  color: black;
+  border: 5px solid black;
+  text-align: center; }
+  /* line 8, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/registerForm/registerForm.scss */
+  #register_form .row .middle_box input {
+    width: 100%;
+    padding: 10px;
+    text-align: center; }
+
+/* line 3, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/patientCard/patientCard.scss */
+#patientCard .row .middle_box {
+  border: 2px solid black;
+  padding: 25px;
+  text-align: left; }
+  /* line 8, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/patientCard/patientCard.scss */
+  #patientCard .row .middle_box .account_details input {
+    width: 100%; }
+
+/* line 1, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/signup/signup.scss */
+#doctor_signup_container {
+  text-align: center; }
+  /* line 4, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/signup/signup.scss */
+  #doctor_signup_container h1 {
+    position: absolute;
+    top: 40vh;
+    text-align: center;
+    width: 100vw; }
+
+/* line 1, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/dashboard/dashboard.scss */
+#doctor_dashboard_container {
+  text-align: center;
+  width: 100%;
+  height: 100%; }
+  /* line 5, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/dashboard/dashboard.scss */
+  #doctor_dashboard_container h4 {
+    padding: 10px; }
+
+/* line 1, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/questionnaire/questionnaire.scss */
+#doctor_questionnaire_container {
+  text-align: center; }
+  /* line 3, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/questionnaire/questionnaire.scss */
+  #doctor_questionnaire_container h4 {
+    padding: 10px; }
+
+/* line 1, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/newQuiz/newQuiz.scss */
+#doctor_newquiz_container {
+  text-align: center;
+  width: 100%;
+  height: 100%; }
+  /* line 5, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/newQuiz/newQuiz.scss */
+  #doctor_newquiz_container h2 {
+    padding: 10px; }
+  /* line 8, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/newQuiz/newQuiz.scss */
+  #doctor_newquiz_container a {
+    cursor: pointer; }
+  /* line 11, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/newQuiz/newQuiz.scss */
+  #doctor_newquiz_container input[type=checkbox] {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 5px; }
+  /* line 17, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/newQuiz/newQuiz.scss */
+  #doctor_newquiz_container .col-md-8.header {
+    border: 1px solid black;
+    margin-bottom: 25px;
+    margin-top: 25px; }
+    /* line 21, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/newQuiz/newQuiz.scss */
+    #doctor_newquiz_container .col-md-8.header input {
+      padding: 15px;
+      width: 75%;
+      text-align: center; }
+
+/* line 1, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/previewQuiz/previewQuiz.scss */
+#doctor_preview_container {
+  width: 100%;
+  height: 100%; }
+
+/* line 1, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/patients/patients.scss */
+#doctor_patients_container {
+  text-align: center; }

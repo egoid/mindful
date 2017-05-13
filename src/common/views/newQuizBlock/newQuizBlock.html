@@ -1,0 +1,65 @@
+<div id="newQuizblock">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 question_block">
+      <div class="question_block">
+        {{quiz.id+1}}
+        <input type="text" placeholder="Question Text" ng-model="doctorNewQuiz.data_questions_text[quiz.id]"/>
+<div ng-if="doctorNewQuiz.static_grading_criteria < 0">
+        <hr>
+        Question Answers
+        <div class="row">
+          <div class="col-md-8">
+            a. <input type="text" placeholder="Answer Text" ng-model="doctorNewQuiz.data_questions_a[quiz.id]" />
+          </div>
+          <div class="col-md-4">
+            <input type="text" placeholder="Answer Value"  ng-model="doctorNewQuiz.data_answers_a[quiz.id]" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8">
+            b. <input type="text" placeholder="Answer Text"  ng-model="doctorNewQuiz.data_questions_b[quiz.id]" />
+          </div>
+          <div class="col-md-4">
+            <input type="text" placeholder="Answer Value"  ng-model="doctorNewQuiz.data_answers_b[quiz.id]"  />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8">
+            c. <input type="text" placeholder="Answer Text" ng-model="doctorNewQuiz.data_questions_c[quiz.id]"  />
+          </div>
+          <div class="col-md-4">
+            <input type="text" placeholder="Answer Value"  ng-model="doctorNewQuiz.data_answers_c[quiz.id]"  />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8">
+            d. <input type="text" placeholder="Answer Text"  ng-model="doctorNewQuiz.data_questions_d[quiz.id]"  />
+          </div>
+          <div class="col-md-4">
+            <input type="text" placeholder="Answer Value"  ng-model="doctorNewQuiz.data_answers_d[quiz.id]"  />
+          </div>
+        </div>   
+
+        <div class="row">
+          <div class="col-md-8">
+            e. <input type="text" placeholder="Answer Text"  ng-model="doctorNewQuiz.data_questions_e[quiz.id]"  />
+          </div>
+          <div class="col-md-4">
+            <input type="text" placeholder="Answer Value"  ng-model="doctorNewQuiz.data_answers_e[quiz.id]"  />
+          </div>
+        </div>
+
+</div>        
+      
+
+      </div>
+    </div>
+    <div class="col-md-2">
+      <a ng-click="doctorNewQuiz.remove(quiz.id)">Remove Question</a>
+    </div>
+  </div>
+</div>

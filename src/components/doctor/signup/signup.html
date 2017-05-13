@@ -1,1 +1,15 @@
-Hi ! Welcome to Clarity Demo
+<div id="doctor_signup_container">
+
+  <h4> Mindful App </h4>
+
+  <button ng-click="doctorSignup.actions.home()"> Home </button> 
+  <button ng-click="doctorSignup.actions.login()"> Login </button> 
+  <button ng-click="doctorSignup.actions.register()"> Register </button> 
+
+  <login-form ng-if="doctorSignup.state === 'login' " />
+    
+  <register-form ng-if="doctorSignup.state === 'register' " />
+
+  <h1 ng-if="doctorSignup.state === '' "> Mindful </h1>
+
+</div>  

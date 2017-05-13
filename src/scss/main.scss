@@ -2,7 +2,24 @@
 @import "../lib/font-awesome/scss/font-awesome";
 @import "universal";
 
-@import '../components/candidate/signup/signup';
+
+@import '../common/views/loginForm/loginForm';
+@import '../common/views/clarityNav/clarityNav';
+@import '../common/views/customQuiz/customQuiz';
+@import '../common/views/newQuizBlock/newQuizBlock';
+@import '../common/views/newRubric/newRubric';
+@import '../common/views/quiz/quiz';
+@import '../common/views/newPatientBlock/newPatientBlock';
+@import '../common/views/registerForm/registerForm';
+@import '../common/views/patientCard/patientCard';
+
+
+@import '../components/doctor/signup/signup';
+@import '../components/doctor/dashboard/dashboard';
+@import '../components/doctor/questionnaire/questionnaire';
+@import '../components/doctor/newQuiz/newQuiz';
+@import '../components/doctor/previewQuiz/previewQuiz';
+@import '../components/doctor/patients/patients';
 
 // injector
 // endinjector

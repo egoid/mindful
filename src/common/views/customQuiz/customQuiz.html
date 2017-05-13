@@ -1,0 +1,18 @@
+<div id="customQuiz">
+  <div class="row">
+    <div class="col-lg-2 col-md-2 col-sm-2"></div>
+
+    <div class="col-lg-8 col-md-8 col-sm-8 quiz_card_middle">
+        <h4 ng-hide="quiz.title == 'Create a new quiz'">{{quiz.title}}</h4>
+        <h4 ng-if="quiz.title == 'Create a new quiz'" ui-sref="{{quiz.state}}">{{quiz.title}}</h4>
+        <hr ng-hide="quiz.title == 'Create a new quiz'">
+        <div class="row tool_bar" ng-hide="quiz.title == 'Create a new quiz'">
+          <div class="col-md-3" ng-click="customQuizCtrl.preview(quiz.title)"> Preview Quiz </div>
+          <div class="col-md-3" ng-click="doctorQuestionnaire.edit_quiz(quiz.title)"> Edit Quiz </div>
+          <div class="col-md-3"> View Quiz Scores </div>
+          <div class="col-md-3" ng-click="doctorQuestionnaire.delete_quiz(quiz.title)"> Delete Quiz </div>
+        </div>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2"></div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<clarity-nav />
+
+<div id="doctor_patients_container">
+
+  <button ng-click="doctorPatients.actions.patient_creation()"> Add a New Patient </button>
+
+  <br>
+
+  <new-patient ng-if="doctorPatients.reveal_new == true" />
+
+  <patient-card />
+
+
+</div>

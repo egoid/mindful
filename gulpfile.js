@@ -28,7 +28,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('watch', ['browser-sync'], function() {
-  gulp.watch(["./src/scss/*.scss", "./src/components/**/*.scss"], ['sass']);
+  gulp.watch(["./src/scss/*.scss", "./src/components/**/*.scss", "./src/common/views/**/*.scss"], ['sass']);
   gulp.watch(["./src/**/**/*.html", './src/**/**/*.js']).on('change', bs.reload);
 });
 
