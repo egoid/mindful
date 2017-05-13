@@ -36,6 +36,7 @@
                 $timeout(function() {
                   console.log(currentstate)
                   $state.go(currentstate);
+                  break;
                 });
 
 
