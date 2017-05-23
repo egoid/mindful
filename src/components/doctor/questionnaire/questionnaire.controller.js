@@ -17,10 +17,13 @@
 
     function activate() {
 
-      doctorQuizServices.get_quizzes(localStorageManager.retrieve('user')[0]).then(function(res) {
+      doctorQuizServices.get_quizzes(localStorageManager.retrieve('user')[0])
+      .then(function(res) {
         vm.quizzes = res.data || [];
+      }, function errorCallback(response) {
+        console.log(response)
+        add_default_quizzes();
       })
-      add_default_quizzes();
 
     };
     function go_preview(title) {
