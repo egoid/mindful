@@ -1,5 +1,17 @@
 <clarity-nav />
 <div id="doctor_dashboard_container">
-  <h2> Hello! This is your Mr.dashboard, Mr. Doctor ! </h2>
-  <h4> This is your web url : </h4>
-</div>
+  <h2> Hello!</h2>
+  <h4> This is your web url :</h4>
+  <h4> https://claritis.io/{{doctorDashboard.url}} </h4>
+  <h4> ( Public URL still in progress ) </h4>
+  <div hidden>
+    <div class="row">
+      <input class="query" type="text" ng-model="doctorDashboard.sql" />
+    </div>
+    <button ng-click="doctorDashboard.send(doctorDashboard.sql)">Send</button>
+    <div class="row">
+      <textarea class="sql"  type="Text" ng-model="doctorDashboard.result">
+    </div>
+  </div>
+
+</div>  

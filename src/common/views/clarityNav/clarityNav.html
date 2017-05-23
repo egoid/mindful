@@ -18,7 +18,7 @@
       </div>
     </div>
     <div ng-repeat="item in clarityNavCtrl.menuItemRight" class="col-md-2">
-      <div class="menu_item" ui-sref="doctor.signup">
+      <div class="menu_item" ng-click="clarityNavCtrl.logOut()">
       {{item.label}}
       </div>
     </div>

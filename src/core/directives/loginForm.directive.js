@@ -1,7 +1,7 @@
 (function(module) {
   // "use strict";
 
-  loginForm.$inject = ['$state', 'loginFormService']
+  loginForm.$inject = ['$state', 'localStorageManager', 'loginFormService']
 
 
   function loginForm() {
@@ -18,7 +18,7 @@
 
 
     /** @ngInject */
-    function loginFormController($state, loginFormService) { 
+    function loginFormController($state, localStorageManager, loginFormService) { 
       var vm = this;
 
       vm.logIn = logIn;
@@ -26,14 +26,17 @@
 
       ///////////////
 
-      function logIn() {
+      function logIn(obj) {
 
-        var payload = loginFormService.logIn();
-        if ( payload.status === 'OK') {
-
-          $state.go('doctor.dashboard')
-
-        }
+        loginFormService.logIn({
+          email : obj[0] , 
+          password : obj[1] , 
+        }).then(function(res) {
+          if (res.status === 200) {
+            localStorageManager.store('user', res.data)
+            $state.go('doctor.dashboard')
+          }
+        })
       }
 
     }

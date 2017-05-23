@@ -1,10 +1,9 @@
 (function(module) {
   "use strict";
 
-  clarityNav.$inject = ['$state',]
+  clarityNav.$inject = ['$state', 'localStorageManager' , 'loginFormService']
 
-
-  function clarityNav($state) {
+  function clarityNav( $state , localStorageManager , loginFormService ) {
 
     var directive = {
       restrict: "E",
@@ -21,6 +20,7 @@
       var vm = this;
 
       vm.state = $state;
+      vm.logOut = logOut;
       vm.stateArray = [];
       var currentState = $state.current.name;
       var patientState = 'patient';
@@ -107,6 +107,18 @@
           }
           vm.loggedin = true;
         }
+      };
+
+      function logOut() {
+        let session_key = localStorageManager.retrieve('user')[0]
+        loginFormService.logOut({
+          session_key : session_key
+        }).then(function(res) {
+          if (res.data === 'OK') {
+            localStorageManager.destroy('user')
+            $state.go('doctor.signup')
+          }
+        })
       }
 
 

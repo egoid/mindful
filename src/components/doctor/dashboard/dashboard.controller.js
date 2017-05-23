@@ -2,15 +2,20 @@
 
   "use strict";
   var DoctorDashboardCtrl;
-  DoctorDashboardCtrl.$inject = [];
+  DoctorDashboardCtrl.$inject = ['localStorageManager' ,'sqlService'];
 
-  function DoctorDashboardCtrl() {
+  function DoctorDashboardCtrl(localStorageManager , sqlService) {
     
     var vm = this;
+    vm.result = "Sql";
+    vm.send = send;
+    vm.url = localStorageManager.retrieve("user")[3]
 
-    
-
-
+    function send(q) {
+      sqlService.query(q).then(function(res) {
+        vm.result = JSON.stringify(res.data).replace(/,/g , "\n")
+      })
+    }
   }
 
 

@@ -1,26 +1,25 @@
 (function (module) {
 
-  var doctorQuizServices;
-  doctorQuizServices.$inject=['$http' , 'localStorageManager' , 'urlFactory'];
- function doctorQuizServices ($http , localStorageManager , urlFactory) {
+  var doctorPatientServices;
+  doctorPatientServices.$inject=['$http' , 'localStorageManager' , 'urlFactory'];
+ function doctorPatientServices ($http , localStorageManager , urlFactory) {
 
     var exports = {
-      save_quiz: save_quiz,
-      get_quizzes : get_quizzes ,
+      create_patient: create_patient,
+      get_patients : get_patients ,
       update_quiz : update_quiz ,
       delete_quiz : delete_quiz ,
     }
 
-    function save_quiz(data) {
+    function create_patient(data) {
       return $http({
           method: 'POST',
-          url: urlFactory.test_local() + 'doctor/1/quiz',
+          url: urlFactory.test_local() + 'doctor/1/patient',
           data: data
       })
     };
 
     function delete_quiz(data) {
-      console.log(data)
       return $http({
           method: 'POST',
           url: urlFactory.test_local() + 'doctor/1/delete_quiz',
@@ -35,18 +34,18 @@
       })
     };
 
-    function get_quizzes(data) {
+
+    function get_patients(data) {
       return $http({
           method: 'GET',
-          url: urlFactory.test_local() + 'doctor/1/quiz?id='+String(data),
+          url: urlFactory.test_local() + 'doctor/1/patient?id='+String(data),
           data: data
-      })      
+      })  
     };
-
 
     return exports;
   };
-  module.factory('doctorQuizServices', doctorQuizServices);
+  module.factory('doctorPatientServices', doctorPatientServices);
 }(angular.module("Clarity.Services")));
 
 

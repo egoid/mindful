@@ -28,7 +28,8 @@
     <div class="col-md-2"></div>
   </div>
 
-  <new-rubric ng-if="doctorNewQuiz.static_grading_criteria > 0"></new-rubric>
+  <new-rubric></new-rubric>
+  <new-metric></new-metric>
   <new-quiz ng-repeat="quiz in doctorNewQuiz.questions"></new-quiz>
 
 </div>

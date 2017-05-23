@@ -1,0 +1,65 @@
+<div id="newMetric">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 question_block">
+      <div class="question_block">
+        <hr>
+        <h2>Metric Calculation</h2>
+        <h5> Metrics are the sum values of specific questions </h5>
+        <h5> By default, quizzes are scored as the sum values of ALL questions </h5>
+        <hr>
+
+          <button ng-class="{active : doctorNewQuiz.state === 'single_metric'}" ng-click="doctorNewQuiz.toggle_metric('default')"> Use Default Metric </button>
+          <button ng-class="{active : doctorNewQuiz.state === 'multiple_metric'}" ng-click="doctorNewQuiz.toggle_metric('')"> Use Custom Metric </button>
+        
+
+<!--         <div ng-if="doctorNewQuiz.metric_widget > 0">
+          <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+              <button ng-click="doctorNewQuiz.add_metric()"> Add Another Metric </button>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div> -->
+
+        
+
+        <div ng-if="doctorNewQuiz.metric_widget > 0">
+          <div class="row metric_check">
+            <button 
+            ng-repeat="quiz_number in doctorNewQuiz.questions track by $index" 
+            ng-class='{ active : doctorNewQuiz.metric_check[$index] == true }'>{{quiz_number.id+1}}</button>
+          </div>
+
+          <div class="row">
+            <div class="warning" ng-repeat="error in doctorNewQuiz.metric_resolve"> {{error}} </div>
+          </div>
+
+          <div class="row" ng-repeat="metric in doctorNewQuiz.metrics track by $index">
+              <div class="col-md-4">
+                <input type="text" placeholder="{{metric.metric}}" ng-model="doctorNewQuiz.metrics_title[$index]"/>
+              </div>
+              <div class="col-md-4">
+                <h4> Is Scored As The Sum of Questions #:</h4>
+              </div>
+              <div class="col-md-4">
+                <!-- <input type="text" placeholder="{{metric.example}}"/> -->
+                 <input type="text"
+                    placeholder="{{metric.example}}"
+                   ng-model="doctorNewQuiz.metrics_bank[doctorNewQuiz.metrics_title[$index]]"
+                   ng-change="doctorNewQuiz.metric_test(doctorNewQuiz.metrics_bank[doctorNewQuiz.metrics_title[$index]])"
+                   ng-model-options="{debounce: 250}" />
+              </div>
+          </div>
+
+
+
+      </div>
+
+
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>

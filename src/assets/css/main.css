@@ -10145,6 +10145,20 @@ button {
   font-size: .75em;
   margin: 10px; }
 
+/* line 82, /Users/ta/Desktop/clarity/clarity_fe/src/scss/universal.scss */
+button.active {
+  background: black;
+  border: 1px solid black;
+  color: white;
+  padding: 10px;
+  font-size: .75em;
+  margin: 10px; }
+
+/* line 91, /Users/ta/Desktop/clarity/clarity_fe/src/scss/universal.scss */
+.disable {
+  background: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.5); }
+
 /* line 2, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/loginForm/loginForm.scss */
 #loginForm .login_box {
   padding: 25px;
@@ -10267,6 +10281,30 @@ button {
   #patientCard .row .middle_box .account_details input {
     width: 100%; }
 
+/* line 1, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/newMetric/newMetric.scss */
+#newMetric {
+  padding-bottom: 25px; }
+  /* line 6, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/newMetric/newMetric.scss */
+  #newMetric .row .col-md-8 .question_block {
+    border: 1px solid black; }
+    /* line 8, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/newMetric/newMetric.scss */
+    #newMetric .row .col-md-8 .question_block input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px; }
+    /* line 13, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/newMetric/newMetric.scss */
+    #newMetric .row .col-md-8 .question_block button.active {
+      background: black;
+      color: white; }
+    /* line 18, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/newMetric/newMetric.scss */
+    #newMetric .row .col-md-8 .question_block .metric_check button {
+      color: black;
+      background: white; }
+    /* line 22, /Users/ta/Desktop/clarity/clarity_fe/src/common/views/newMetric/newMetric.scss */
+    #newMetric .row .col-md-8 .question_block .metric_check button.active {
+      color: white;
+      background: black; }
+
 /* line 1, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/signup/signup.scss */
 #doctor_signup_container {
   text-align: center; }
@@ -10285,6 +10323,16 @@ button {
   /* line 5, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/dashboard/dashboard.scss */
   #doctor_dashboard_container h4 {
     padding: 10px; }
+  /* line 9, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/dashboard/dashboard.scss */
+  #doctor_dashboard_container textarea.sql {
+    width: 50%;
+    height: 400px;
+    padding: 5px; }
+  /* line 14, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/dashboard/dashboard.scss */
+  #doctor_dashboard_container input.query {
+    width: 50%;
+    height: 50px;
+    padding: 5px; }
 
 /* line 1, /Users/ta/Desktop/clarity/clarity_fe/src/components/doctor/questionnaire/questionnaire.scss */
 #doctor_questionnaire_container {

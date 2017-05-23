@@ -5,7 +5,7 @@
     <div class="col-lg-4 col-md-4 col-xs-4 middle_box">
       <div class="row">
         <div class="col-lg-6 col-xs-6">
-          Patient Username
+          {{patient.username}}
         </div>
       </div>
 
@@ -13,21 +13,21 @@
 
       <div class="row">
         <div class="col-lg-3 col-xs-3">
-          <button>Patient Details</button>
+          <button ng-class="{ active : patient.show_details > 0 }" ng-click="doctorPatients.actions.show_details(patient.username)">Patient Details</button>
         </div>
         <div class="col-lg-3 col-xs-3">
-          <button>Quiz Performance</button>
+          <button  ng-class="{ active : patient.show_send > 0 }"  ng-click="doctorPatients.actions.show_send(patient.username)">Send Medical Records</button>
         </div>
         <div class="col-lg-3 col-xs-3">
-          <button>Send Medical Records</button>
+          <button class="disable">Quiz Performance</button>
         </div>
         <div class="col-lg-3 col-xs-3">
-          <button>Delete</button>
+          <button class="disable">Delete</button>
         </div>
       </div>
 
 
-      <div class="row">
+      <div class="row" ng-if="patient.show_details > 0">
         <hr>
         Patient Details
         <div class="account_details">
@@ -36,7 +36,7 @@
               <span> Name  </span>
             </div>
             <div class="col-lg-10 col-xs-10">
-              <span> Adam T </span>
+              <span> {{patient.name}} </span>
             </div>
           </div>
           <div class="row">
@@ -53,7 +53,7 @@
               <span> Phone </span>
             </div>
             <div class="col-lg-10 col-xs-10">
-              <span> 949-245-9949 </span>
+              <span> {{patient.phone}} </span>
             </div>  
           </div>
           <div class="row">
@@ -61,7 +61,7 @@
               <span> Email: </span>
             </div>
             <div class="col-lg-10 col-xs-10">
-              <span> Adam.Anh.Ta@Gmail.com </span>
+              <span> {{patient.email}} </span>
             </div>
           </div>
             <div class="col-lg-4 col-xs-4">
@@ -72,7 +72,7 @@
       </div>
 
 
-      <div class="row">
+      <div class="row" ng-if="patient.show_send > 0">
         <hr>
         Send Medical Records
         <div class="send_records">
@@ -80,7 +80,7 @@
               <span> To Email: </span>
             </div>
             <div class="col-lg-10 col-xs-10">
-              <span> Adam.Anh.Ta@Gmail.com </span>
+              <input type="text" />
             </div>   
             <div class="col-lg-10 col-xs-10">
               <button>Send Records</button>

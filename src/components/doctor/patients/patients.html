@@ -8,7 +8,7 @@
 
   <new-patient ng-if="doctorPatients.reveal_new == true" />
 
-  <patient-card />
+  <patient-card ng-repeat="patient in doctorPatients.patients" />
 
 
 </div>

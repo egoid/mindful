@@ -4,12 +4,12 @@
     </div>
     <div class="col-lg-4 col-md-4 col-xs-4 middle_box">
       <h4> Register Form </h4>
-      <input type="text" placeholder="First Name" ng-model="doctorSignup.first_name" />
-      <input type="text" placeholder="Last Name"  ng-model="doctorSignup.last_name"/>
-      <input type="text" placeholder="Email"  ng-model="doctorSignup.email"/>
-      <input type="password" placeholder="Password"  ng-model="doctorSignup.password" />
+      <input type="text" placeholder="First Name" ng-model="registerFormCtrl.first_name" />
+      <input type="text" placeholder="Last Name"  ng-model="registerFormCtrl.last_name"/>
+      <input type="text" placeholder="Email"  ng-model="registerFormCtrl.email"/>
+      <input type="password" placeholder="Password"  ng-model="registerFormCtrl.password" />
 
-      <button ng-click="doctorSignup.actions.save_user()"> Register </button>
+      <button ng-click="registerFormCtrl.save()"> Register </button>
     </div>
     <div class="col-lg-4 col-md-4 col-xs-4">
     </div>

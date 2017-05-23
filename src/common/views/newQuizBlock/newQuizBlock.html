@@ -3,9 +3,13 @@
     <div class="col-md-2"></div>
     <div class="col-md-8 question_block">
       <div class="question_block">
+        <div class="row">
+          <h2> Question # {{quiz.id+1}} </h2>
+        </div>
         {{quiz.id+1}}
         <input type="text" placeholder="Question Text" ng-model="doctorNewQuiz.data_questions_text[quiz.id]"/>
-<div ng-if="doctorNewQuiz.static_grading_criteria < 0">
+          
+<!-- <div ng-if="doctorNewQuiz.static_grading_criteria < 0">
         <hr>
         Question Answers
         <div class="row">
@@ -53,7 +57,7 @@
           </div>
         </div>
 
-</div>        
+</div>  -->       
       
 
       </div>

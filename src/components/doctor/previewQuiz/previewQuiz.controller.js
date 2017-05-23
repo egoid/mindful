@@ -14,18 +14,10 @@
     activate();
 
     function activate() {
-      var quizzes = localStorageManager.retrieve('doctor_quizzes')
-      quizzes.forEach(function(quiz,i) {
-        if (quiz.title === vm.quiz_title) {
-          vm.quiz = quiz;
-        }
-
-        if (i+1 === quizzes.length) {
-          if (!(vm.quiz)) {
-            $state.go('doctor.questionnaire')
-          }
-        }
-      })
+      var quiz = myCacheService.get("quiz")
+      var parse = JSON.parse(quiz.json)
+      quiz.json = parse
+      vm.quiz = quiz.json
     };
     function select(id , answer) {
       vm.selected_codex[id] = answer

@@ -8,7 +8,7 @@
 
        <input type="text" placeholder="Username" ng-model="loginFormCtrl.username"/>
        <input type="password" placeholder="Password" ng-model="loginFormCtrl.password"/>
-       <button ng-click="loginFormCtrl.logIn()"> Login </button>
+       <button ng-click="loginFormCtrl.logIn([loginFormCtrl.username , loginFormCtrl.password ])"> Login </button>
     </div>
     <div class="col-lg-4 col-md-4 col-xs-4">
     </div>
