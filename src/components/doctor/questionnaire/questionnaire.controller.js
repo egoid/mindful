@@ -20,6 +20,7 @@
       doctorQuizServices.get_quizzes(localStorageManager.retrieve('user')[0])
       .then(function(res) {
         vm.quizzes = res.data || [];
+        add_default_quizzes();
       }, function errorCallback(response) {
         console.log(response)
         add_default_quizzes();
