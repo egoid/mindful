@@ -61,7 +61,7 @@
             })
             .state('doctor.newquiz', {
               url: '/newquiz',
-              templateUrl: 'components/doctor/newquiz/newQuiz.html',
+              templateUrl: 'components/doctor/newQuiz/newQuiz.html',
               controller: 'DoctorNewQuizCtrl',
               controllerAs: 'doctorNewQuiz',
               onEnter: scrollContent
