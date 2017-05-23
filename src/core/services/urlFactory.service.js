@@ -9,7 +9,8 @@
     };
 
     function test_local() {
-      return "http://localhost:3020/"
+      // return "http://localhost:3020/"
+      return "http://192.241.220.185:3020/"
     }
 
 

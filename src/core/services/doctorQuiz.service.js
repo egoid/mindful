@@ -20,7 +20,6 @@
     };
 
     function delete_quiz(data) {
-      console.log(data)
       return $http({
           method: 'POST',
           url: urlFactory.test_local() + 'doctor/1/delete_quiz',
